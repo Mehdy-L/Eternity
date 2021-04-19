@@ -9,6 +9,11 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("terrain 2");
     }
+
+    public void PlayMultiGame()
+    {
+        SceneManager.LoadScene("terrain");
+    }
     public void QuitGame ()
     {
         Debug.Log("QUIT!");

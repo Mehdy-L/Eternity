@@ -27,14 +27,17 @@ public class Player_setup : NetworkBehaviour
             }
         }
 
-        RegisterPlayer();
+        GetComponent<Player>().Setup();
     }
 
-    private void RegisterPlayer()
+    public override void OnStartClient()
     {
-        // Change le nom du joueur par "Player" + son identifiant
-        string playerName = "Player" + GetComponent<NetworkIdentity>().netId;
-        transform.name = playerName;
+        base.OnStartClient();
+
+        string netId = GetComponent<NetworkIdentity>().netId.ToString();
+        Player player = GetComponent<Player>();
+
+        GameManager.RegisterPlayer(netId, player);
     }
 
     private void AssignRemoteLayer()
@@ -56,5 +59,7 @@ public class Player_setup : NetworkBehaviour
         {
             sceneCamera.gameObject.SetActive(true);
         }
+
+        GameManager.UnregisterPlayer(transform.name);
     }
 }

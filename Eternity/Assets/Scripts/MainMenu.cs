@@ -12,8 +12,9 @@ public class MainMenu : MonoBehaviour
 
     public void PlayMultiGame()
     {
-        SceneManager.LoadScene("terrain");
+        SceneManager.LoadScene("SceneMultijoueur");
     }
+
     public void QuitGame ()
     {
         Debug.Log("QUIT!");

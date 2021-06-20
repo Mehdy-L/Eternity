@@ -8,12 +8,12 @@ public class mainmenu4 : MonoBehaviour
     // Start is called before the first frame update
     public void SoloPlay()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(5);
     }
 
     public void MultiPlay()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(3);
     }
 
     public void Back()

@@ -26,7 +26,7 @@ public class UserAccountManager : MonoBehaviour
     {
         LoggedInUsername = username.text;
         Debug.Log("Logged is as : " + LoggedInUsername);
-        SceneManager.LoadScene(lobbySceneName);
+        SceneManager.LoadScene(2);
     }
 
 }
